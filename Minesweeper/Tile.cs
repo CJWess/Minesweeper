@@ -10,14 +10,15 @@ namespace Minesweeper
     {
         public int NumericValue { get; }
         public bool IsMine { get; }
+        public Point Location { get; }
+        public bool HasBeenRevealed { get; set; }
 
-        public Point location;
-
-        public Tile(Board board)
+        public Tile(Board board, Point location, bool isMine)
         {
             NumericValue = GetValue(board);
+            Location = location;
+            IsMine = isMine;
         }
-        
 
         public int GetValue(Board board)
         {
