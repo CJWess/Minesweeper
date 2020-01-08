@@ -54,25 +54,15 @@ namespace Minesweeper
             }
         }
 
-        public void Activate()
+        public bool MineHasBeenRevealed()
         {
-            //if tile has been clicked, nothing happens
-            //if tile has mine status and is clicked, it is revealed and the game ends !!
-            //if the tile is clicked and does not have mine status, the game continues 🚩
-            // game ends if mine, if not mine do reveal
-            //UNLESS the tile is clicked and does not have mine status, but is the last non-mine tile 🚩
+            return false;
+            //end game
         }
 
-        public void RevealZeroCostTiles(Tile tile)
+        public bool AllNonMineTilesBeenRevealed()
         {
-            if (tile.NumericValue == 0)
-            {
-                foreach (Tile neighboringTile in NeighboringTiles(tile))
-                {
-                    neighboringTile.HasBeenRevealed = true;
-                }
-                //reveal surrounding tiles, chains for each 0 tile revealed in this way
-            }
+            return false;
         }
 
         public List<Tile> NeighboringTiles(Tile tile)
