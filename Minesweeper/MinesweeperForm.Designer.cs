@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.MineField = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // button82
@@ -115,19 +115,19 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "label3";
             // 
-            // flowLayoutPanel1
+            // MineField
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 57);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(775, 775);
-            this.flowLayoutPanel1.TabIndex = 9;
+            this.MineField.Location = new System.Drawing.Point(23, 57);
+            this.MineField.Name = "MineField";
+            this.MineField.Size = new System.Drawing.Size(775, 775);
+            this.MineField.TabIndex = 9;
             // 
             // MinesweeperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 854);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.MineField);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
@@ -153,7 +153,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel MineField;
     }
 }
 

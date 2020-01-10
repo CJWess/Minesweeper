@@ -16,6 +16,12 @@ namespace Minesweeper
         public MinesweeperForm(Board board)
         {
             InitializeComponent();
+            for (int i = 0; i < board.Width*board.Height-1; i++)
+            {
+                Button button = new Button();
+                button.Tag = i;
+                MineField.Controls.Add(button);
+            }
             // ☻☻☻☻ Flowlayoutpanel version ☻☻☻☻
             //add number of buttons equal to width x height of board
             //button sizing is width of layoutpanel / width - (spacing*width) <-for spacing
@@ -33,7 +39,7 @@ namespace Minesweeper
             //for (int i = 0; i < panel.ColumnCount; i++)
             //{
             //    panel.Controls.Add(new Label() { Text = "sdflkj" }, i, 0);
-            }
+            
         }   
     }
 }
