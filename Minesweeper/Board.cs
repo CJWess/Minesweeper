@@ -54,15 +54,16 @@ namespace Minesweeper
             }
         }
 
-        public bool MineHasBeenRevealed()
+        public bool MineRevealed()
         {
-            return false;
-            //end game
+            return tiles.Any(tile => tile.Value.IsMine && tile.Value.HasBeenRevealed);
         }
 
-        public bool AllNonMineTilesBeenRevealed()
+        public bool AllNonMineTilesRevealed()
         {
-            return false;
+            return tiles.Values
+                .Where(x => !x.IsMine)
+                .All(x => x.HasBeenRevealed);
         }
 
         public List<Tile> NeighboringTiles(Tile tile)
